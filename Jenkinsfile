@@ -17,6 +17,9 @@ pipeline {
                 script {
                     myapp = docker.build("odoo:${env.BUILD_ID}")
                 }
+                script {
+                    myapp1 = docker.build("postgres:9.4}")
+                }
             }
         }
     
@@ -26,6 +29,12 @@ pipeline {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
+                    }
+                }
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                            myapp1.push
+                            myapp1.push("${env.BUILD_ID}")
                     }
                 }
             }
