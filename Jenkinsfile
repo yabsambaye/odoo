@@ -6,14 +6,14 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/mbayeyabsa/odoo.git', branch:'master'
+        git url:'https://github.com/yabsambaye/odoo.git', branch:'master'
       }
     }
     
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("odoo:${env.BUILD_ID}")
+                    myapp = docker.build("odoo:13")
                     myapp1 = docker.build("postgres:9.4}")
                 }
             }
