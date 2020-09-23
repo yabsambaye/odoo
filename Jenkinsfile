@@ -1,9 +1,10 @@
 pipeline {
- 
+
   environment {
-    registry = "192.168.1.81:5000/ruetech"
+    registry = "37.59.48.5:5000/yabsambaye/myweb"
     dockerImage = ""
-  
+  }
+ 
   agent any
 
   stages {
