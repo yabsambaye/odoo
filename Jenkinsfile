@@ -10,7 +10,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/yabsambaye/odoo.git'
+        git 'https://github.com/yabsambaye/odoo.git'
       }
     }
     
