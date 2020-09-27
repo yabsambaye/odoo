@@ -72,7 +72,9 @@ metadata:
     app: odoo-shop
 spec:
   ports:
-    - port: 8069
+    - nodePort: 30000
+      port: 80
+      targetPort: 8069
   selector:
     app: odoo-shop
     tier: frontend
