@@ -154,18 +154,3 @@ spec:
   resources:
     requests:
       storage: 5Gi
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: odoo-ingress
-#  namespace: odoo
-spec:
-  rules:
-  - host: odoo.ruetech.net
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: odoo-shop
-          servicePort: 80
