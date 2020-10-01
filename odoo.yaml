@@ -1,3 +1,4 @@
+
 #---
 #kind: Namespace
 #apiVersion: v1
@@ -158,6 +159,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: odoo-ingress
+#  namespace: odoo
 spec:
   rules:
   - host: odoo.ruetech.net
